@@ -53,3 +53,17 @@ body {
   transition: opacity 0.3s ease-in 0.4s;
 }
 
+/* if [device width: 480px (breakpoint)] is less than or equal to 480px, then do {...}*/
+/* last two panels will be removed so that in small screens there are only 3 images instead of all 5*/
+@media (max-width: 480px) {
+  /* .container size will change from width: 90vw to 100vw on small screens */
+  .container {
+    width: 100vw;
+  }
+
+  /* last two panels will be removed if device-width is less or equal to 480px */
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
